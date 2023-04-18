@@ -2,7 +2,10 @@ public class Main {
 
 
     public static void main(String[] args) {
-        Book book =new Book("Вавилон",1990);
+
+        Author ivan = new Author("Иван","Иванов");
+
+        Book book = new Book("Вавилон",ivan,1990);
         System.out.println("Название книги = " + book.getName());
         System.out.println("Год издания = " + book.getAge());
         book.setAge(1991);
@@ -14,7 +17,9 @@ public class Main {
 
         System.out.println();
 
-        Book book1 = new Book("Гора",2005);
+        Author ilyas = new Author("Ильяс","Магомедаминов");
+
+        Book book1 = new Book("Гора",ilyas,2005);
         System.out.println("Название книги = " + book1.getName());
         book1.setName("Горы");
         System.out.println("Доработанное название книги = " + book1.getName());
@@ -26,7 +31,9 @@ public class Main {
 
         System.out.println();
 
-        Book book2 = new Book("Гроза",1989);
+        Author Aleksandr = new Author("Александр","Сорокин");
+
+        Book book2 = new Book("Гроза",Aleksandr,1989);
         System.out.println("Название книги = " + book2.getName());
         System.out.println("Год издания = " + book2.getAge());
 
@@ -37,6 +44,5 @@ public class Main {
         System.out.println("Фамилия автора = " + author2.getSurnameAuthor());
         author2.setsurnameAuthor("Орлов");
         System.out.println("Новая фамилия автора = " + author2.getSurnameAuthor());
-
     }
 }
